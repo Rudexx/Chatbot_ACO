@@ -48,75 +48,33 @@
     </style>
 </head>
 <body>
-    <section>
-        <div class="container py-5">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-8 col-lg-6 col-xl-4">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between align-items-center p-3 bg-warning text-white border-bottom-0">
-                            <img src="images/Aco Logo.png" alt="Logo" style="max-width: 50px; height: auto;">
-                            <h3 class="mb-0 fw-bold">Chatbot</h3>
-                            <i class="fas fa-times"></i>
-                        </div>
-                        <div class="card-body chat-box" id="chat-box">
-                            <!-- Existing chat messages will be appended here -->
-                        </div>
-                        <div class="card-footer">
-                            <div class="form-outline">
-                                <input class="form-control " id="user-input" rows="4"></input>
-                                <label class="form-label" for="user-input">Type your message</label>
+    <body>
+        <section>
+            <div class="container py-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-8 col-lg-6 col-xl-4">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center p-3 bg-warning text-white border-bottom-0">
+                                <img src="images/Aco Logo.png" alt="Logo" style="max-width: 50px; height: auto;">
+                                <h3 class="mb-0 fw-bold">Chatbot</h3>
+                                <i class="fas fa-times"></i>
                             </div>
-                            <button class="btn btn-danger btn-block" id="send-button"><h3>Send</h3></button>
+                            <div class="card-body chat-box" id="chat-box">
+                                <!-- Existing chat messages will be appended here -->
+                            </div>
+                            <div class="card-footer">
+                                <input class="form-control " id="user-input" placeholder="Type your message"></input>
+                                <button class="btn btn-danger btn-block mt-3" id="send-button">Send</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-    <script>
-        const chatBox = document.getElementById('chat-box');
-        const userInput = document.getElementById('user-input');
-        const sendButton = document.getElementById('send-button');
-
-        function addMessage(message, sender) {
-            const messageElement = document.createElement('div');
-            messageElement.textContent = message;
-            messageElement.classList.add('d-flex', 'flex-row', 'justify-content-end', 'mb-4');
-            const bubble = document.createElement('div');
-            bubble.classList.add('message-bubble');
-            if (sender === 'user') {
-                bubble.classList.add('user-message');
-                messageElement.classList.remove('justify-content-end');
-                messageElement.classList.add('justify-content-start');
-            } else {
-                bubble.classList.add('bot-message');
-            }
-            bubble.textContent = message;
-            messageElement.appendChild(bubble);
-            chatBox.appendChild(messageElement);
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-
-        function processInput(input) {
-            // You can implement your chatbot logic here
-            // For this example, let's just echo back the user's message
-            return input;
-        }
-
-        sendButton.addEventListener('click', function() {
-            const input = userInput.value.trim();
-            if (input !== '') {
-                addMessage(input, 'user');
-                userInput.value = '';
-                const botResponse = processInput(input);
-                addMessage(botResponse, 'bot');
-            }
-        });
-
-        // Welcome message from the bot
-        addMessage('Hello! How can I assist you today?', 'bot');
-    </script>
+        </section>
+        <script src="webpack.config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@huggingface/transformers-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@huggingface/node-transformers"></script>
+    <script type="module" src="js/index.js"></script>
 </body>
 </html>
