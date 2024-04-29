@@ -1,9 +1,11 @@
 body {
-	background: linear-gradient(-45deg, #ddb226, #ff0000);
+	background: linear-gradient(to right, rgb(37, 37, 37), rgb(91, 90, 89), rgb(0, 0, 0));
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
 	height: 100vh;
 }
+
+
 
 @keyframes gradient {
 	0% {

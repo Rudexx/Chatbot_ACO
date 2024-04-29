@@ -1,0 +1,23 @@
+ 
+            @media (min-width: 768px) {
+                #sidebarMenu {
+                    width: 250px;
+                    position: fixed;
+                    top: 0;
+                    left: -250px; /* Inicia fuera del viewport */
+                    height: 100vh;
+                    background-color: #f8f9fa;
+                    border-right: 1px solid rgba(0,0,0,.125);
+                    transition: all 0.3s;
+                    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+                }
+                #sidebarMenu.show {
+                    left: 0; /* Muestra el sidebar */
+                }
+                #mainContent {
+                    transition: margin-left 0.3s;
+                }
+                #mainContent.expanded {
+                    margin-left: 250px; /* El contenido principal se empuja a la derecha */
+                }
+            }
