@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/prueba.css">
+    <link rel="icon" href="images/Aco Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/Aco Logo.png" type="image/x-icon">
     <title>Chatbot</title>
     <style>
         body {
@@ -61,76 +63,12 @@
                             </div>
                             <div class="card-body chat-box" id="chat-box">
                                 <div id="response" class="card-body chat-box"></div>
-
-                                <script>
-                                    var optionsVisible = false;
-                                
-                                    function toggleOptions() {
-                                        optionsVisible = !optionsVisible;
-                                        var options = document.getElementById('options');
-                                        options.style.display = optionsVisible ? 'block' : 'none';
-                                    }
-                                
-                                    function selectOption(option) {
-                                        var response = document.getElementById('response');
-                                        switch (option) {
-                                            case 'Baja de Celulares':
-                                                response.innerHTML += `
-                                                    <div class="message-bubble user-message">${option}</div>
-                                                    <div class="message-bubble bot-message">Listo, para realizar actas de baja de celulares debes tener en cuenta lo siguiente:
-                                                       <br> 1. Debes ingresar los siguientes datos en el archivo de inventario de celulares: Codigo del centro de costos, Punto de venta o propietario, serial, Numero de activo Fijo,  Modelo del telefono. y cadena (IRCC, PJ, LYC)
-                                                       <br> 2. Crear el acta con el formato indicado la cadena, la fecha de creacion del acta, el numero de activo fijo, el serial, el modelo y una firma de la persona que diligenció el acta
-                                                        <br> 3. Descargar la acta diligenciada y enviarla al punto de venta al cual correspondia el celular que se dio de baja.
-                                                        <br> 4. Una vez el punto de venta envie la acta firmada adjuntarla en la carpeta designada en el drive y linkearla en el inventario de celulares.
-                                                        <br> 5. Actualizar las columnas de Acta creada, acta recibida y equipo retornado a Bima en caso de que aplique.
-                                                        <br> 5.1 Marcar el celular de baja una vez sea retornado a bima con el nombre del punto de venta para facilitar el proceso de baja del activo.
-                                                        </div>
-                                                `;
-                                                break;
-                                            case 'Creacion de actas de entrega de equipos':
-                                                response.innerHTML += `
-                                                    <div class="message-bubble user-message">${option}</div>
-                                                    <div class="message-bubble bot-message">Listo, para realizar actas de entregas de equipos debes tener en cuenta lo siguiente:
-                                                       <br> 1. En la plataforma de Fracttal acceder a la seccion de activos e ingresar el serial del activo en el buscador para validar su existencia
-                                                       <br> 1.2 En caso de que el equipo no exista en la plataforma, crearlo añadiendo serial, modelo, fecha de compra, tipo de equipo y clasificación
-                                                        <br> 2. Acceder a la seccion de plan de trabajo y acceder al plan de trabajo de tecnologia
-                                                        <br> 2.1 Añadir el activo correspondiente pulsando en el boton de + y buscando el activo por su serial
-                                                        <br> 3. Ir a ordenes de trabajo y crear una nueva tarea no planificada, adjuntando el serial del activo y la fecha de creacion de la tarea e indicando que es una asignacion de equipo TI.
-                                                        <br> 4. Checkear la tarea seleccionada y clickear en crear nueva orden de trabajo
-                                                        <br> 5. Asignar un responsable (Generalmente se asignan a mesa de servicio ACO) </div>
-                                                `;     
-                                                break;
-                                            case 'Manejo y cierre de tickets':
-                                                response.innerHTML += `
-                                                    <div class="message-bubble user-message">${option}</div>
-                                                    <div class="message-bubble bot-message">Listo, para manejar tickets debes tener en cuenta lo siguiente:
-                                                       <br> 1. Debes modificar la categoria del requisito a la categoria de solicitud de equipo, dicha categoria
-                                                        da un espacio para grande de tiempo para responder el ticket dado los tiempos de respuesta de algunos proveedores
-                                                        <br> 2. Marcar caso como estado de ejecucion
-                                                        <br> 2.1 Documentar el caso añadiendo comentarios, en caso que ocurra alguna novedad que impida la resolucion inmediata del mismo.
-                                                        <br> 3. Registrar el tiempo de ejecucion en formato de dias, horas y minutos
-                                                        <br> 4. Oprimir el boton de "Por aprobar" para cerrar el caso, añadir una descripcion de como fue solucionado el caso </div>
-                                                `;
-                                                break;
-                                            default:
-                                                response.innerHTML += `
-                                                    <div class="message-bubble user-message">${option}</div>
-                                                    <div class="message-bubble bot-message">Respuesta predeterminada</div>
-                                                `;
-                                                break;
-                                        }
-                                
-                                        toggleOptions();
-                                    }
-                                </script>
                             </div>
                             <div class="card-footer">
                                 <div class="form-outline">
                                     <button class="btn btn-dark btn-block mt-3" id="option-button" onclick="toggleOptions()">Seleccionar una opción</button>
                                     <div id="options" style="display:none;">
-                                        <button class="btn btn-secondary btn-block mt-1" onclick="selectOption('Baja de Celulares')">Baja de Celulares</button>
-                                        <button class="btn btn-secondary btn-block mt-1" onclick="selectOption('Creacion de actas de entrega de equipos')">Creacion de actas de entrega de equipos</button>
-                                        <button class="btn btn-secondary btn-block mt-1" onclick="selectOption('Manejo y cierre de tickets')">Manejo y cierre de tickets</button>
+
                                     </div>
                                 </div>
                             </div>
@@ -143,6 +81,6 @@
         <script src="https://cdn.jsdelivr.net/npm/@huggingface/transformers-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
     <script src="https://cdn.jsdelivr.net/npm/@huggingface/node-transformers"></script>
-    <script type="module" src="js/index.js"></script>
+    <script src="js/chatbot.js"></script>
 </body>
 </html>
