@@ -1,36 +1,58 @@
 Titulo: Baja de Celulares
 Contenido:
-Listo, para realizar actas de baja de celulares debes tener en cuenta lo siguiente:
-1. Debes ingresar los siguientes datos en el archivo de inventario de celulares: Codigo del centro de costos, Punto de venta o propietario, serial, Numero de activo Fijo, Modelo del telefono. y cadena (IRCC, PJ, LYC)
-2. Crear el acta con el formato indicado la cadena, la fecha de creacion del acta, el numero de activo fijo, el serial, el modelo y una firma de la persona que diligenció el acta
-3. Descargar la acta diligenciada y enviarla al punto de venta al cual correspondia el celular que se dio de baja.
-4. Una vez el punto de venta envie la acta firmada adjuntarla en la carpeta designada en el drive y linkearla en el inventario de celulares.
-5. Actualizar las columnas de Acta creada, acta recibida y equipo retornado a Bima en caso de que aplique.
-5.1 Marcar el celular de baja una vez sea retornado a bima con el nombre del punto de venta para facilitar el proceso de baja del activo.
+Listo, para realizar actas de baja de celulares debes tener en cuenta los siguientes pasos:
+1. Debes ingresar los siguientes datos en el archivo de inventario de celulares: Código del centro de costos, Punto de venta o propietario, serial, Número de activo Fijo, Modelo del teléfono. y cadena (IRCC, PJ, LYC)<br>
+2. Crear el acta con el formato indicado la cadena, la fecha de creación del acta, el número de activo fijo, el serial, el modelo y una firma de la persona que diligenció el acta. <br>
+3. Descargar la acta diligenciada y enviarla al punto de venta al cual corresponde el celular que se dio de baja.<br>
+4. Una vez el punto de venta envíe la acta firmada adjuntarla en la carpeta designada en el drive y linkear en el inventario de celulares.<br>
+5. Actualizar las columnas de Acta creada, acta recibida y equipo retornado a Bima en caso de que aplique.<br>
+5.1 Marcar el celular de baja una vez sea retornado a bima con el nombre del punto de venta para facilitar el proceso de baja del activo.<br>
 
 Marcador: $$$
 
 Titulo: Creacion de actas de entrega de equipos
 Contenido:
-Listo, para realizar actas de entregas de equipos debes tener en cuenta lo siguiente:
-1. En la plataforma de Fracttal acceder a la seccion de activos e ingresar el serial del activo en el buscador para validar su existencia
-1.2 En caso de que el equipo no exista en la plataforma, crearlo añadiendo serial, modelo, fecha de compra, tipo de equipo y clasificación
-2. Acceder a la seccion de plan de trabajo y acceder al plan de trabajo de tecnologia
-2.1 Añadir el activo correspondiente pulsando en el boton de + y buscando el activo por su serial
-3. Ir a ordenes de trabajo y crear una nueva tarea no planificada, adjuntando el serial del activo y la fecha de creacion de la tarea e indicando que es una asignacion de equipo TI.
-4. Checkear la tarea seleccionada y clickear en crear nueva orden de trabajo
+Listo, para realizar actas de entregas de equipos debes tener en cuenta los siguientes pasos:
+1. En la plataforma de Fracttal acceder a la sección de activos e ingresar el serial del activo en el buscador para validar su existencia. 
+1.2 En caso de que el equipo no exista en la plataforma, crearlo añadiendo serial, modelo, fecha de compra, tipo de equipo y clasificación.
+2. Acceder a la sección de plan de trabajo y acceder al plan de trabajo de tecnologia.
+2.1 Añadir el activo correspondiente pulsando en el botón de + y buscando el activo por su serial.
+3. Ir a órdenes de trabajo y crear una nueva tarea no planificada, adjuntando el serial del activo y la fecha de creación de la tarea e indicando que es una asignación de equipo TI.
+4. Chequear la tarea seleccionada y clickear en crear nueva orden de trabajo.
 5. Asignar un responsable (Generalmente se asignan a mesa de servicio ACO).
 
 Marcador: $$$
 
 Titulo: Manejo y cierre de tickets
 Contenido:
-Listo, para manejar tickets debes tener en cuenta lo siguiente:
-1. Debes modificar la categoria del requisito a la categoria de solicitud de equipo, dicha categoria
-da un espacio para grande de tiempo para responder el ticket dado los tiempos de respuesta de algunos proveedores
-2. Marcar caso como estado de ejecucion
-2.1 Documentar el caso añadiendo comentarios, en caso que ocurra alguna novedad que impida la resolucion inmediata del mismo.
-3. Registrar el tiempo de ejecucion en formato de dias, horas y minutos
-4. Oprimir el boton de "Por aprobar" para cerrar el caso, añadir una descripcion de como fue solucionado el caso.
+Listo, para manejar tickets debes tener en cuenta los siguientes pasos:
+1. Debes modificar la categoría del requisito a la categoría de solicitud de equipo, dicha categoría.
+da un espacio para grande de tiempo para responder el ticket dado los tiempos de respuesta de algunos proveedores.
+2. Marcar caso como estado de ejecución.
+2.1 Documentar el caso añadiendo comentarios, en caso que ocurra alguna novedad que impida la resolución inmediata del mismo.
+3. Registrar el tiempo de ejecución en formato de días, horas y minutos.
+4. Oprimir el botón de "Por aprobar" para cerrar el caso, añadir una descripción de cómo fue solucionado el caso.
 
 Marcador: $$$
+
+Titulo: Creación de un activo en Fracttal (Portátil)
+Contenido:
+Listo, para la creación de un activo en Fractal debes tener en cuenta los siguientes pasos:
+1. Dirígete al menú desplegable lateral y oprime en la sección de “Activos”.
+2. Cambiar el filtro a la categoría de “Equipos”.
+3. Oprimir el Botón de + en la parte inferior derecha de la pantalla.
+3. Ingresar los siguientes datos del activo: Nombre: Portatil , En el campo de código y serial se coloca el serial del equipo, Fabricante, Modelo, Tipo de equipo, Clasificación ( Operaciones, Administrativos), clasificación (Renting, Leasing, Propio) y la fecha de compra del activo.
+4. En la sección lateral elegir “Adjuntos” y añadir una foto del serial del portátil. Dicha foto debe ser subida en una carpeta personal por temas de organización.
+4. Oprimir el botón de "Por aprobar" para cerrar el caso, añadir una descripción de cómo fue solucionado el caso.
+
+Marcador: $$$
+
+Titulo: Creación de un activo en Fracttal (Equipos)
+Contenido:
+Listo, para la creación de un activo en Fractal debes tener en cuenta los siguientes pasos:
+1. Dirígete al menú desplegable lateral y oprime en la sección de “Activos”.
+2. Cambiar el filtro a la categoría de “Equipos”.
+3. Oprimir el Botón de + en la parte inferior derecha de la pantalla.
+3. Ingresar los siguientes datos del activo: Nombre (Impresora, Monitor, etc) , código y serial (En caso de no ser portatil seria el codigo de activo Fijo y el serial respectivamente), Fabricante, Modelo, Tipo de equipo, Clasificación ( Operaciones, Administrativos), clasificación (Renting, Leasing, Propio) y la fecha de compra del activo.
+4. Añadir una foto del activo.
+5. Presionar el botón de “Guardar Cambios” antes de salir de la página.
