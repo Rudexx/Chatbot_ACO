@@ -56,3 +56,41 @@ Listo, para la creación de un activo en Fractal debes tener en cuenta los sigui
 3. Ingresar los siguientes datos del activo: Nombre (Impresora, Monitor, etc) , código y serial (En caso de no ser portatil seria el codigo de activo Fijo y el serial respectivamente), Fabricante, Modelo, Tipo de equipo, Clasificación ( Operaciones, Administrativos), clasificación (Renting, Leasing, Propio) y la fecha de compra del activo.
 4. Añadir una foto del activo.
 5. Presionar el botón de “Guardar Cambios” antes de salir de la página.
+
+Marcador: $$$
+
+Titulo: Generación de Orden de compra en ERP Siesa
+Contenido:
+Listo, para la generación de Orden de compra en ERP Siesa debes tener en cuenta los siguientes pasos:
+1.  Ingresar a Siesa con el usuario y contraseña.
+2. Ingresar al módulo superior izquierdo y elegir la categoría de “COMERCIAL”.
+3. Se accede a Compras> Ordenes de compra> Directas.
+3. Los datos que debe tener la orden de compra son los siguientes: Centro de Operaciones: para el caso de Bogotá se elige Sede Principal Bogotá, NIT del proveedor: Verificar ya que un proveedor puede manejar distintos NIT, Sucursal: se refiere al tipo de servicio (Compra, arrendamiento, etc) en el caso de compra el código es AOC. 
+4. Ir al panel de de “Generales” y escribir el código del comprador y el solicitante, además de una nota que describa que tipo de compra se está realizando.
+5. Presionar el botón de “Guardar Cambios” antes de salir de la página.
+6. Ir al apartado “Ítems” y darle a adicionar.
+6.1 En el caso de ser un producto caracterizado como gasto se debe elegir la categoría de Compra de equipos de cómputo Gravado.
+6.2 Elegir el punto de venta para donde se asignará el ítem según su código de centro de costos.
+6.3 Elegir el motivo de la compra: Ya sea un gasto administrativo, para un punto de venta o compra de activos fijos.
+6.4 En precio Unitario se añade el subtotal de la compra que suministró el proveedor.
+6.5 Se añaden los datos faltantes sobre el centro de costos y la cadena del punto de venta u oficina para la cual va dirigida la compra y se da click a adicionar.
+7. Se clickea en el botón de “Aprobar” en la parte superior para pasar la orden de compra por el proceso de aprobación.
+8. Adjuntar la orden de compra en el archivo de “Facturación”.
+9. Una vez aprobada la orden de compra clickear el botón de imprimir para generar el archivo que se debe enviar a los proveedores para despachar los productos.
+
+
+Marcador: $$$
+
+Titulo: Generación de actas de Activación
+Contenido:
+1.  En primera Instancia se deben ingresar los equipos a la plataforma de Fracttal para manejar el inventarios, para esto se debe utilizar una plantilla en excel con los siguientes datos: Código del activo, Nombre del activo, Fabricante, Modelo, Número de Serial, Tipo de activo, Clasificación 1 (Operaciones o administrativos), Clasificación 2 (Renting, Leasing o Propio), Fecha de Compra, Visible Para todos (Cadena) y una nota que indique el punto de venta al que pertenece.
+1.1  Existen distintos campos que no se utilizan por el momento pero se debe ingresar como una columna en la plantilla, estos son: otro 1, otro 2, código de barra NFC, prioridad, Horas de uso promedio diario, Centro de Costo y código del padre.
+1.2 Una vez terminada la plantilla se realiza la descarga de esta como archivo xlsx
+2. Entrar a Fracttal e ingresar a la sección de Catálogos>Activos
+2.1 En la categoría de Activo Seleccionar “Equipos”
+2.2 En la parte superior derecha seleccionar el icono de tres puntos y hacer clic en importar.
+2.3 Elegir el archivo de la plantilla seleccionada
+3. Seleccionar a qué casilla de la plantilla corresponde cada valor solicitado por Fracttal. Por ejemplo: Número de Serial -> Columna llamada Serial. Finalmente clickear en “Importar”
+4. Como paso siguiente se debe generar el acta de activación para cada uno de los equipos. El formato incluye los siguientes campos: Compañia, Cadena, Fecha de Solicitud, Nombre del Activo, Descripción, Modelo, Marca, Centro de Costos.
+4.1 Añadir los datos de la persona que diligencia: Nombre, Cargo, Firma y Fecha.
+5. Descargar el acta y enviarlo al Coordinador y al director de TI para su aprobación.
